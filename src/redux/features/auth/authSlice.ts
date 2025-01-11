@@ -7,12 +7,13 @@ export type TUser = {
   iat: number;
   exp: number;
 };
-type TAuthSlice = {
-  user: null | object;
+
+type TAuthState = {
+  user: null | TUser;
   token: null | string;
 };
 
-const initialState: TAuthSlice = {
+const initialState: TAuthState = {
   user: null,
   token: null,
 };
@@ -38,5 +39,4 @@ export const { setUser, logout } = authSlice.actions;
 export default authSlice.reducer;
 
 export const useCurrentToken = (state: RootState) => state.auth.token;
-
 export const selectCurrentUser = (state: RootState) => state.auth.user;

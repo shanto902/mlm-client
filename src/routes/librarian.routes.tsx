@@ -1,5 +1,6 @@
-import AddBookVan from "../pages/librarian/book-management/AddBookVan";
-import ManageBookVan from "../pages/librarian/book-management/ManageBookVan";
+import AddBook from "../pages/librarian/book-management/AddBook";
+import AllBooks from "../pages/librarian/book-management/AllBooks";
+
 import IssueBook from "../pages/librarian/borrow-operation/IssueBook";
 import ReturnBook from "../pages/librarian/borrow-operation/ReturnBook";
 import TrackOverdue from "../pages/librarian/borrow-operation/TrackOverdue";
@@ -15,14 +16,14 @@ export const librarianPaths = [
     name: "Book Management",
     children: [
       {
-        name: "Add Books to Van",
-        path: "add-books-van",
-        element: <AddBookVan />,
+        name: "Add Book",
+        path: "add-book",
+        element: <AddBook />,
       },
       {
-        name: "Manage Books in Van",
-        path: "manage-books-van",
-        element: <ManageBookVan />,
+        name: "Manage Books",
+        path: "manage-books",
+        element: <AllBooks />,
       },
     ],
   },

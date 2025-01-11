@@ -1,5 +1,7 @@
+import AllBooks from "../../librarian/book-management/AllBooks";
+
 const BrowseBook = () => {
-  return <div>BrowseBook</div>;
+  return <AllBooks />;
 };
 
 export default BrowseBook;

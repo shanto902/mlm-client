@@ -1,23 +1,22 @@
-import { Button, Layout } from "antd";
+import { Layout } from "antd";
 import Sidebar from "./Sidebar";
-import { logout } from "../../redux/features/auth/authSlice";
 import { Outlet } from "react-router-dom";
-import { useAppDispatch } from "../../redux/hook";
 const { Header, Content } = Layout;
 
 const MainLayout = () => {
-  const dispatch = useAppDispatch();
-
-  const handleLogout = () => {
-    dispatch(logout());
-  };
-
   return (
-    <Layout style={{ height: "100vh" }}>
+    <Layout style={{ height: "100%" }}>
       <Sidebar />
       <Layout>
-        <Header>
-          <Button onClick={handleLogout}>Logout</Button>{" "}
+        <Header
+          style={{
+            textAlign: "center",
+            color: "white",
+            fontSize: "1.25rem",
+            fontWeight: "bold",
+          }}
+        >
+          Mobile Library Management Application
         </Header>
         <Content style={{ margin: "24px 16px 0" }}>
           <div
